@@ -4,8 +4,8 @@ FROM python:3.11
 # Définir le répertoire de travail à l'intérieur du conteneur
 WORKDIR /app
 
-# Copier les fichiers du répertoire FLASK_API dans le répertoire de travail du conteneur
-COPY FLASK_API/ /app/
+# Copier tous les fichiers dans le répertoire de travail du conteneur
+COPY . /app/
 
 # Installer les dépendances à partir du fichier requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
